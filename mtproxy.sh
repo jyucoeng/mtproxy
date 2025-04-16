@@ -233,10 +233,10 @@ Read_config(){
 
 Set_port(){
     while true; do
-        echo -e "${Tip} 请输入 MTProxy 端口 [10000-65535]"
+        echo -e "${Tip} 请输入 MTProxy 端口 [443-65535]"
         read -e -p "(默认：随机生成):" mtp_port
-        [[ -z "${mtp_port}" ]] && mtp_port=$(shuf -i10000-65000 -n1)
-        if [[ ${mtp_port} -ge 10000 ]] && [[ ${mtp_port} -le 65535 ]]; then
+        [[ -z "${mtp_port}" ]] && mtp_port=$(shuf -i443-65000 -n1)
+        if [[ ${mtp_port} -ge 443 ]] && [[ ${mtp_port} -le 65535 ]]; then
             echo && echo "========================"
             echo -e "  端口 : ${Red_globa} ${mtp_port} ${Nc}"
             echo "========================" && echo
