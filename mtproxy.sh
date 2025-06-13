@@ -431,6 +431,7 @@ get_public_ip(){
     InFaces=($(ls /sys/class/net | grep -E '^(eth|ens|eno|esp|enp|venet|veth|vif)'))
     IP_API=(
         "api64.ipify.org"
+        "https://api.ipify.org"
         "ip.sb"
         "ifconfig.me"
         "icanhazip.com"
